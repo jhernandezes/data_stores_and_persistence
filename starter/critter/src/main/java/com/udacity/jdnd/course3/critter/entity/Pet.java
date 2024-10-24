@@ -28,15 +28,6 @@ public class Pet {
 
     public Pet() {}
 
-    public Pet(PetType type, String name, LocalDate birthDate, String notes, Customer customer) {
-        this.type = type;
-        this.name = name;
-        this.birthDate = birthDate;
-        this.notes = notes;
-        this.customer = customer;
-    }
-
-
     public Long getId() {
         return id;
     }

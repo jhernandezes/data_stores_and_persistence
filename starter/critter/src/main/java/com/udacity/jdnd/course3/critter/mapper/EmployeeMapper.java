@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmployeeMapper {
 
-    public static EmployeeDTO toDTO(Employee employee) {
+    public EmployeeDTO toDTO(Employee employee) {
         EmployeeDTO dto = new EmployeeDTO();
         dto.setId(employee.getId());
         dto.setName(employee.getName());

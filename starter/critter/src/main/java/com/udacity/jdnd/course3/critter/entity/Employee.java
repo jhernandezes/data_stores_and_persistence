@@ -27,7 +27,6 @@ public class Employee {
     @Column(name = "day")
     private Set<DayOfWeek> daysAvailable;
 
-    // Getters y setters
 
     public long getId() {
         return id;

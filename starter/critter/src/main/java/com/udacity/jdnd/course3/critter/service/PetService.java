@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class PetService {
 
     private final PetRepository petRepository;
-    private final CustomerRepository customerRepository; // Repositorio para obtener Customer
+    private final CustomerRepository customerRepository;
 
     @Autowired
     public PetService(PetRepository petRepository, CustomerRepository customerRepository) {

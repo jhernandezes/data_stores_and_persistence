@@ -23,7 +23,6 @@ public class Customer {
 
     public Customer() {}
 
-    // Constructor, Getters y Setters
 
     public Long getId() {
         return id;
