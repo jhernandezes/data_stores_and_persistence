@@ -16,11 +16,15 @@ import java.util.stream.Collectors;
 @Transactional
 public class CustomerService {
 
-    @Autowired
     private CustomerRepository customerRepository;
 
-    @Autowired
     private CustomerMapper customerMapper;
+
+    @Autowired
+    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper) {
+        this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
+    }
 
     public CustomerDTO saveCustomer(CustomerDTO customerDTO) {
         Customer customer = customerMapper.toEntity(customerDTO);

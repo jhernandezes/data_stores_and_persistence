@@ -30,9 +30,7 @@ public class PetService {
     public PetDTO savePet(PetDTO petDTO) {
         Pet pet = PetMapper.toEntity(petDTO);
 
-        // Obtener el Customer asociado
-        Customer customer = customerRepository.findById(petDTO.getCustomerId())
-                .orElseThrow(() -> new RuntimeException("Customer not found"));
+        Customer customer = customerRepository.getOne(petDTO.getCustomerId());
 
         pet.setCustomer(customer);
         Pet savedPet = petRepository.save(pet);
